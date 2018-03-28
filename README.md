@@ -10,7 +10,7 @@ deployment. Then you do the actual deployment. And the last step will
 create another snapshot of the environment and compare it against the
 last one.
 
-### Take pre-deploy snapshots
+### 1. Take pre-deploy snapshots
 
 This command will send a snapshot request to Backtrac for each project ID
 passed to the backtrac.project_ids property. After all snapshot requests
@@ -29,12 +29,12 @@ has finished processing. And it will report when it has finished.
   -D'backtrac.action'='backtrac-compare-self'
 ```
 
-### Perform your deployment.
+### 2. Perform your deployment.
 
 Make your deployment to the environment you took snapshots of.
 
 
-### Take post-deploy snapshots and comparison
+### 3. Take post-deploy snapshots and comparison
 
 This command will send a snapshot/diff request to Backtrac for each project
 ID passed to the backtrac.project_ids property. After all snapshot/diff
