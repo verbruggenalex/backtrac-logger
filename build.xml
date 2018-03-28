@@ -32,6 +32,7 @@
 
     <!-- Run an action on multiple projects. -->
     <target name="backtrac-run-batch">
+        <delete file="${backtrac.results_file}" />
         <property name="project-ids" value="${backtrac.project_ids}" />
         <foreach list="${project-ids}" param="backtrac.project_id" target="${backtrac.action}" />
         <if>
