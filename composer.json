@@ -14,7 +14,7 @@
     "support": {
         "email": "DIGIT-NEXTEUROPA-QA@ec.europa.eu",
         "issues": "https://github.com/verbruggenalex/backtrac-logger/issues",
-        "wiki": "http://www.my-wiki.com/",
+        "wiki": "https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/Backtrac+Integrations",
         "source": "https://github.com/verbruggenalex/backtrac-logger",
         "docs": "https://github.com/verbruggenalex/backtrac-logger/blob/master/README.md"
     },
