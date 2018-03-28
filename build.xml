@@ -42,5 +42,6 @@
                 <foreach_parallel list="${backtrac.result.ids}" param="backtrac.result.id" target="backtrac-check-results" threadCount="4"/>
             </then>
         </if>
+        <delete file="${backtrac.results_file}" />
     </target>
 </project>
