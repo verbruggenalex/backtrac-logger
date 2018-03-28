@@ -1,7 +1,8 @@
 # backtrac-logger
 
 A repository used to trigger and log backtrac tasks in Jenkins. Allows
-batch jobs on different projects.
+batch jobs on different projects. It is currently available at:
+http://subsites-ci.ne-dev.eu/job/Backtrac%20run%20batch/build?delay=0sec
 
 ## Example usage
 

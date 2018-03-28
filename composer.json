@@ -1,9 +1,29 @@
 {
     "name": "verbruggenalex/backtrac-logger",
     "description": "Composer package with tasks for Backtrac usage in Jenkins.",
+    "type": "project",
+    "keywords": ["backtrac", "phing", "batch", "logging"],
+    "homepage": "https://github.com/verbruggenalex/backtrac-logger",
+    "time": "2018-03-29",
+    "license": "EUPL-1.1",
     "require": {
         "ec-europa/backtrac-php-client": "dev-feature/MULTISITE-18518",
         "mak/phing-foreach-parallel-task": "~1.0.0",
         "phing/phing": "2.*"
-    }
+    },
+    "support": {
+        "email": "DIGIT-NEXTEUROPA-QA@ec.europa.eu",
+        "issues": "https://github.com/verbruggenalex/backtrac-logger/issues",
+        "wiki": "http://www.my-wiki.com/",
+        "source": "https://github.com/verbruggenalex/backtrac-logger",
+        "docs": "https://github.com/verbruggenalex/backtrac-logger/blob/master/README.md"
+    },
+    "authors": [
+        {
+            "name": "Alexander Verbruggen",
+            "email": "verbruggenalex@gmail.com",
+            "homepage": "https://github.com/verbruggenalex",
+            "role": "Developer"
+        }
+    ]
 }
