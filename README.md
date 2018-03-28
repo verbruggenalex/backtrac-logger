@@ -26,7 +26,7 @@ has finished processing. And it will report when it has finished.
   -D'backtrac.project_ids'='xxxxx,xxxxx' \
   -D'backtrac.check_results'='false' \
   -D'backtrac.results_file'='results.txt' \
-  -D'backtrac.action'='backtrac-compare-self'
+  -D'backtrac.action'='backtrac-single-snapshot'
 ```
 
 ### 2. Perform your deployment.
