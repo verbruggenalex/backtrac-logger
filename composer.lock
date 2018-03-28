@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ec-europa/backtrac-php-client.git",
-                "reference": "934d85b18a9d6f154d775209590ff790e288c7ce"
+                "reference": "f9b3bbf48f0d5ce28f9c9d6072d7cfdd8770f72c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ec-europa/backtrac-php-client/zipball/934d85b18a9d6f154d775209590ff790e288c7ce",
-                "reference": "934d85b18a9d6f154d775209590ff790e288c7ce",
+                "url": "https://api.github.com/repos/ec-europa/backtrac-php-client/zipball/f9b3bbf48f0d5ce28f9c9d6072d7cfdd8770f72c",
+                "reference": "f9b3bbf48f0d5ce28f9c9d6072d7cfdd8770f72c",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,7 @@
             "license": [
                 "EUPL-1.1"
             ],
-            "time": "2018-03-28T08:56:27+00:00"
+            "time": "2018-03-28T09:39:36+00:00"
         },
         {
             "name": "mak/phing-foreach-parallel-task",
