@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+
+<project default="backtrac-single-snapshot">
+    <!-- Import the phing tasks into your project. -->
+    <import file="${project.basedir}/vendor/ec-europa/backtrac-php-client/phing/import.xml" />
+    <taskdef name="foreach_parallel" classname="MaK\Phing\Task\ForeachParallelTask" />
+
+    <!-- Target to update a website url for an environment. -->
+    <target name="backtrac-update-url">
+        <backtrac-set-url environment="${backtrac.environment}" url="${backtrac.url}" project_id="${backtrac.project_id}" auth_token="${backtrac.auth_token}" />
+    </target>
+ 
+    <!-- Target for comparing different environments. -->
+    <target name="backtrac-compare-environments">
+        <backtrac-compare compare_mode="${backtrac.compare_mode}" project_id="${backtrac.project_id}" check_results="${backtrac.check_results}" auth_token="${backtrac.auth_token}" />
+    </target>
+
+    <!-- Target to take single snapshot: before deployment or build. -->
+    <target name="backtrac-single-snapshot">
+        <backtrac-compare compare_mode="snapshot" environment="${backtrac.environment}" project_id="${backtrac.project_id}" check_results="${backtrac.check_results}" auth_token="${backtrac.auth_token}" />
+    </target>
+    
+    <!-- Target for comparing environment to latest snapshot: after deployment or build. -->
+    <target name="backtrac-compare-self">
+        <backtrac-compare compare_mode="compare_itself" environment="${backtrac.environment}" project_id="${backtrac.project_id}" check_results="${backtrac.check_results}" auth_token="${backtrac.auth_token}" />
+    </target>
+
+    <!-- Target for checking results only. -->
+    <target name="backtrac-check-results">
+        <backtrac-compare compare_mode="${backtrac.result.id}" environment="${backtrac.environment}" project_id="${backtrac.project_id}" check_results="true" auth_token="${backtrac.auth_token}" />
+    </target>
+
+    <!-- Run an action on multiple projects. -->
+    <target name="backtrac-run-batch">
+        <property name="project-ids" value="${backtrac.project_ids}" />
+        <foreach list="${project-ids}" param="backtrac.project_id" target="${backtrac.action}" />
+        <if>
+            <available file="${backtrac.results_file}" type="file" />
+            <then>
+                <sleep seconds="5"/>
+                <loadfile property="backtrac.result.ids" file="${backtrac.results_file}" />
+                <foreach_parallel list="${backtrac.result.ids}" param="backtrac.result.id" target="backtrac-check-results" threadCount="4"/>
+            </then>
+        </if>
+    </target>
+</project>
