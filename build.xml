@@ -37,7 +37,7 @@
         <if>
             <available file="${backtrac.results_file}" type="file" />
             <then>
-                <sleep seconds="5"/>
+                <sleep seconds="15"/>
                 <php expression="rtrim(fgets(fopen('${backtrac.results_file}', 'r')), ',');" returnProperty="backtrac.job.ids" level="debug" />
                 <foreach_parallel list="${backtrac.job.ids}" param="backtrac.job.id" target="backtrac-check-results" threadCount="4"/>
             </then>
