@@ -27,7 +27,7 @@
 
     <!-- Target for checking results only. -->
     <target name="backtrac-check-results">
-        <backtrac-compare compare_mode="check_results" environment="${backtrac.environment}" project_id="${backtrac.job.id}" check_results="true" auth_token="${backtrac.auth_token}" />
+        <backtrac-compare compare_mode="${backtrac.job.id}" environment="${backtrac.environment}" project_id="${backtrac.project_id}" check_results="true" auth_token="${backtrac.auth_token}" />
     </target>
 
     <!-- Run an action on multiple projects. -->
